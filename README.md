@@ -18,3 +18,5 @@ git clone https://github.com/Nandani1414/CodeAlpha_ImageGallery.git
 ## Live Demo
 [View Live Project](https://Nandani1414.github.io/CodeAlpha_ImageGallery/)
 
+
+
