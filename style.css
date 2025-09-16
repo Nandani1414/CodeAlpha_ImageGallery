@@ -1,0 +1,135 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0b0c10;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 28px;
+  color: #66fcf1;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  margin: 15px;
+}
+
+.filter-buttons button {
+  background: #1f2833;
+  border: 2px solid #66fcf1;
+  color: #66fcf1;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #66fcf1;
+  color: #0b0c10;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+}
+
+/* Responsive */
+@media(max-width:1100px){
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+@media(max-width:700px){
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:450px){
+  .gallery { grid-template-columns: 1fr; }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navigation arrows */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
+  padding: 0 30px;
+  color: #fff;
+  user-select: none;
+}
+
+.controls span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls span:hover {
+  color: #66fcf1;
+}

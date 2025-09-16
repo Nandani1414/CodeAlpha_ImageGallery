@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Space Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filter-buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('galaxy')">Galaxy</button>
+  <button onclick="filterImages('moon')">Moon</button>
+  <button onclick="filterImages('planet')">Planet</button>
+  <button onclick="filterImages('astronaut')">Astronaut</button>
+  <button onclick="filterImages('nature')">Nature</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery" id="gallery">
+  <img src="galaxy1.jpeg" class="gallery-img galaxy" alt="Galaxy" onclick="openGallery(0)">
+  <img src="galaxy2.jpeg" class="gallery-img galaxy" alt="Galaxy" onclick="openGallery(1)">
+  <img src="nature1.jpeg" class="gallery-img nature" alt="Nature" onclick="openGallery(2)">
+  <img src="nature2.jpeg" class="gallery-img nature" alt="Nature" onclick="openGallery(3)">
+  <img src="moon.jpeg" class="gallery-img moon" alt="Moon" onclick="openGallery(4)">
+  <img src="moon2.jpeg" class="gallery-img moon" alt="Moon" onclick="openGallery(5)">
+  <img src="astronaut.jpeg" class="gallery-img astronaut" alt="Astronaut" onclick="openGallery(6)">
+  <img src="astronaut2.jpeg" class="gallery-img astronaut" alt="Astronaut" onclick="openGallery(7)">
+  <img src="planet1.jpeg" class="gallery-img planet" alt="Planet" onclick="openGallery(8)">
+  <img src="planet2.jpeg" class="gallery-img planet" alt="Planet" onclick="openGallery(9)">
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="lightbox-content">
+    <img id="lightboxImg" alt="Large view">
+  </div>
+  <div class="controls">
+    <span onclick="changeImage(-1)">&#10094;</span>
+    <span onclick="changeImage(1)">&#10095;</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
